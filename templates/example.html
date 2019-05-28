@@ -1,0 +1,26 @@
+
+<html>
+<head>
+<title>Example Template!</title>
+</head>
+<body>
+{% if myvar %}
+<h1>Dynamic variable is: {{ wild_card }}</h1>
+{% else %}
+<h1>None given.</h1>
+{% endif %}
+
+<h1>This is a page with html.</h1>
+
+<p>This displays properly !</p>
+
+<a href="https://www.google.com">This is a link to Google!</a>
+
+{% for site in links %}
+<a href="{{ site }}">Here is the site !</a>
+{% endfor %}
+
+<h3>The end</h3>
+
+</body>
+</html>
