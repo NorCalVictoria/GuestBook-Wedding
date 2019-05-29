@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Guest Book</title>
+    <title>guestbook</title>
 
     <!-- Bootstrap core CSS -->
     <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet"> 
@@ -25,17 +25,18 @@
     <div class="container theme-showcase" role="main">
 
       <div class="jumbotron">
-        <h1>Guest Book</h1>
-        <a type="button" class="btn btn-link" href="{{ url_for('sign') }}">Sign the Guest Book</a>
+        <h1>Guestbook</h1>
+        <a type="button" class="btn btn-link" href="{{ url_for('sign') }}">Please Sign Guest Log</a>
       </div>
+      {% for r in result %}
 
       <div class="page-header">
-        <h1>Name</h1>
+        <h1>{{ r.name }}</h1>
       </div>
       <div class="well">
-        <p>Please leave your best wishes for the bride and groom .</p>
+        <p>{{ r.comment  }}</p>
       </div>
-
+      {% endfor %}
     </div> <!-- /container -->
 
   </body>
